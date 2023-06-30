@@ -29,8 +29,8 @@ services:
     environment:
       MYSQL_DATABASE: wordpress
       MYSQL_USER: root
-      MYSQL_PASSWORD: rootpassword
-      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
     volumes:
       - db_data:/var/lib/mysql
   wordpress:
@@ -41,7 +41,7 @@ services:
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: root
-      WORDPRESS_DB_PASSWORD: rootpassword
+      WORDPRESS_DB_PASSWORD: root
     volumes:
       - ./wp-content:/var/www/html/wp-content
     ports:
